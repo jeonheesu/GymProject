@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+                  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.kr.gym.mapper.MemberMapper">
+
+	<insert id="registInsert">
+		INSERT INTO gymProject (g_id, g_password, g_Rpassword, g_name, g_height, g_weight, g_bmi)
+		VALUES(#{g_id}, #{g_password}, #{g_Rpassword}, #{g_name} ,#{g_height}, #{g_weight}, #{g_bmi});
+	</insert>
+
+	<select id="check_id" parameterType="String"
+		resultType="Integer">
+		SELECT count(*) cnt FROM gymProject WHERE g_id = #{g_id}
+	</select>
+
+	
+
+	<select id="getRealPassword" resultType="String">
+		select g_password from
+		gymProject where g_id=#{g_id}
+	</select>
+	
+	<select id="login" resultType="co.kr.gym.model.MemberDTO">
+		select * from gymProject where g_id = #{g_id}
+	</select>
+
+	<select id="memberRead"
+	resultType="co.kr.gym.model.MemberDTO">
+	select * from gymProject where g_id = #{g_id}
+</select>
+
+	<select id="memberList"
+		resultType="co.kr.gym.model.MemberDTO">
+		SELECT * FROM gymProject
+	</select>
+
+ <update id="memberUpdate">
+ 
+ UPDATE gymProject SET g_id=#{g_id}, g_password=#{g_password}, g_Rpassword=#{g_Rpassword}, 
+ g_name=#{g_name}, g_height=#{g_height}, g_weight=#{g_weight}, g_bmi=#{g_bmi}  
+ WHERE g_no=#{g_no};
+ </update>
+
+</mapper>
+
+	

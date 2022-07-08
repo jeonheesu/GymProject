@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/logo.css">
+<link rel="stylesheet" href="/css/login.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&display=swap"
+	rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+	integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+	crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+	rel="stylesheet">
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	  <div id="header">
+
+		<div class="herder1">
+			<a id="logo" href="/">JHS_GYM</a>
+			<span th:if="${session.g_id == null || session.g_id == ''}">
+			  <a id="logo1" href="login">LOGIN</a>
+			  <a id="logo2" href="regist">REGIST</a>
+			</span>
+			<span th:if="${session.g_id != null && session.g_id != ''}">
+			<a id="logo1" href="logout">LOGOUT</a>
+			 <a id="logo2" th:href="@{myPage(g_id=${session.g_id})}">MYPAGE</a>
+		  </span>
+		  </div>
+
+  </div>
+
+  <div id="header1">
+
+  </div>
+
+	<div id="center">
+		<div class="center1">
+
+			<table border="1px solid black">
+				<tr>
+					<td>no</td>
+					<td>아이디</td>
+					<td>닉네임</td>
+					<td>키</td>
+					<td>몸무게</td>
+					<td>bmi</td>
+				
+				</tr>
+				<tr th:each="dto : ${list}">
+					<td th:text="${dto.g_no}"></td>
+					<td th:text="${dto.g_id}"></td>
+					<td th:text="${dto.g_name}"></td>
+					<td th:text="${dto.g_height}"></td>
+					<td th:text="${dto.g_weight}"></td>
+					<td th:text="${dto.g_bmi}"></td>
+				</tr>
+			</table>
+
+
+		</div>
+	</div>
+
+
+
+
+
+
+	<script src="/js/login.js"></script>
+</body>
+
+</html>

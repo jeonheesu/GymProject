@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/logo.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <title>Insert title here</title>
+</head>
+
+<body>
+
+
+
+
+  <div id="header">
+
+    <div class="herder1">
+      <a id="logo" href="/">JHS_GYM</a>
+      <span th:if="${session.g_id == null || session.g_id == ''}">
+        <a id="logo1" href="login">LOGIN</a>
+        <a id="logo2" href="regist">REGIST</a>
+      </span>
+      <span th:if="${session.g_id != null && session.g_id != ''}">
+      <a id="logo1" href="logout">LOGOUT</a>
+       <a id="logo2" th:href="@{myPage(g_id=${session.g_id})}">MYPAGE</a>
+    </span>
+    </div>
+
+  </div>
+
+  <div id="center">
+   
+
+    
+
+  </div>
+
+
+
+  <div id="footer">
+
+
+  </div>
+
+
+
+</body>
+
+</html>

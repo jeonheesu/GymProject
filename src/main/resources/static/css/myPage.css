@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+table{
+  margin-left: 2%; 
+}
+
+form{
+  margin-left: 5%;
+}
+
+#id_check{
+  margin-left: 2%;
+}
+
+#center{
+  background-color: white;
+}
+
+.center1
+{
+  font-size: 30px;
+  width: 50%;
+  height: 80%;
+  margin: 0 auto;
+  padding-top: 130px;
+  
+  
+}
+
+
+
+#g_id , #g_password , #g_Rpassword , #g_name {
+  height: 30px;
+  width: 300px;
+  
+}
+
+#g_height, #g_weight{
+  width: 30%;
+  height: 20px;
+}
+
+
+
+
+.myPagechang {
+  border: black 1px solid;
+  width: 400px;
+  margin: 0 auto;
+  height: 60%;
+  padding: 20px;
+}
+
+.myPagechang th{
+  margin-left: 2%;
+}
+
+
+#login {
+  width: 300px;
+  background: black;
+  color: white;
+  height: 30px;
+}
+
+#UpdateBtn{
+  width: 300px;
+  color: black;
+  height: 30px;
+  background: black;
+  color: white;
+}

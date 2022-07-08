@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/logo.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Insert title here</title>
+</head>
+
+<body>
+
+      <div id="header">
+
+        <div class="herder1">
+          <a id="logo" href="/">JHS_GYM</a>
+          <span th:if="${session.g_id == null || session.g_id == ''}">
+            <a id="logo1" href="login">LOGIN</a>
+            <a id="logo2" href="regist">REGIST</a>
+          </span>
+          <span th:if="${session.g_id != null && session.g_id != ''}">
+          <a id="logo1" href="logout">LOGOUT</a>
+           <a id="logo2" th:href="@{myPage(g_id=${session.g_id})}">MYPAGE</a>
+        </span>
+        </div>
+
+  </div>
+
+  <div id="header1">
+
+  </div>
+    
+    
+    <div id="center">
+        <div class="center1"> 
+             <div class="loginchang">
+                       <div>[LOGIN]</div>
+                  <form action="/login" method="post" id="loginForm">
+                     <input type="text" name="g_id" id="g_id" placeholder="login"> <br>
+                     <input type="password" name="g_password" id="g_password" placeholder="password"> <br>
+                     <input type="submit" name="loginBtn" id="loginBtn" value="로그인"> <br>
+                     <input type="button" name="registBtn" id="registBtn" value="회원가입" onclick="location.href='/regist'"> <br>
+                  </form>
+                
+             </div>
+            
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div id="footer"></div>
+
+
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

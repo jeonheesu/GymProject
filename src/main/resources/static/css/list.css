@@ -1,0 +1,188 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+body {
+  margin: 0;
+ 
+} 
+
+#header1{
+    width: 100%;
+    height: 100px;
+}
+
+
+
+#header{
+    border: 1px solid black;
+    width: 100%;
+    height: 100px;
+    background: black;
+    justify-content: center;
+    position: fixed;
+  
+    
+} 
+
+ a{
+    color: white;
+      text-decoration: none;
+}  
+
+
+#logo  {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    width: 100%;
+    margin-left: 10%;
+}
+
+
+
+#logo1 , #logo2 ,#logo3
+{
+  margin-left: 20px;
+  margin-top: 2%;
+ 
+}
+
+
+#logo1 , #logo3{
+    color: white;
+    float: right;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    margin-right: 5%;
+}  
+#logo2 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    float: right;
+}  
+
+#admin{
+  display: inline-flex;
+  margin-left: 35%;
+}
+
+ #center{
+ 
+    height: 750px;
+    
+   
+ }
+
+.loginment{
+	font-size: 20px;
+}
+
+
+
+
+
+   
+
+.center1{
+    font-size: 50px;
+    text-align: center; 
+    padding-top: 200px;
+    font-family: 'Noto Serif KR', serif;
+    width: 100%;
+}
+
+.centerBtn{
+    width: 238px;
+    height: 60px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 34px;
+    background-color: black;
+    
+}
+
+
+  
+  .button_container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+  }
+  
+  .description, .link {
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 35px;
+  }
+  
+  .btn {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #222;
+    padding: 17px 60px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    border-radius: 34px;
+    margin-top: 20px;
+  }
+  
+  .btn span {
+    position: relative; 
+    z-index: 1;
+  }
+  
+  .btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: linear-gradient(126.12deg, rgb(0, 198, 255) 0%, rgb(153, 51, 255) 100%);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  }
+  
+  .btn:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+  
+  .link {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  
+  .link a {
+    color: #000;
+    font-size: 25px; 
+  }
+
+
+
+#footer {
+    border: 1px solid black;
+    height: 200px;
+    background: black;
+} 
+
+
+  
